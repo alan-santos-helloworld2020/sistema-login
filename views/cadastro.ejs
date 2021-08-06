@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <%- include('partials/libs') %>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <%- include('partials/navegador') %>
+    <div id="root">
+      <div class="row">
+        <div class="col s10 l6 push-s1 push-l3">
+          <form action="#" v-on:submit.prevent="enviar" method="post">
+            
+            <div class="input-field col s12">
+              <i class="material-icons prefix">person</i>
+              <input
+                type="text"
+                v-model="cadastro.nome"
+                name="nome"
+                id="txtnome"
+                required
+              />
+              <label for="nome">NOME</label>
+            </div>
+            <div class="input-field col s12">
+              <i class="material-icons prefix">contact_phone</i>
+              <input
+                type="tel"
+                v-model="cadastro.telefone"
+                name="contato"
+                id="txtcontato3"
+                required
+              />
+              <label for="contato">CELULAR</label>
+            </div>
+            <div class="input-field col s12">
+              <i class="material-icons prefix">contact_mail</i>
+              <input
+                type="email"
+                v-model="cadastro.email"
+                name="email"
+                id="txtemail"
+                required
+              />
+              <label for="email">EMAIL</label>
+            </div>
+
+            <div class="input-field col s12">
+              <i class="material-icons prefix">markunread_mailbox</i>
+              <input
+                type="text"
+                v-model="cadastro.cep"
+                name="cep"
+                id="txtcep"
+                required
+              />
+              <label for="nome">CEP</label>
+            </div>
+
+            <div class="input-field col s12">
+                <i class="material-icons prefix">password</i>
+                <input
+                  type="text"
+                  v-model="cadastro.senha"
+                  name="cep"
+                  id="txtpassword"
+                  
+                  required
+                />
+                <label for="nome">SENHA</label>
+              </div>
+
+            <div class="input-field col s12">
+              <button
+                class="btn waves-effect waves-light red"
+                type="reset"
+                name="reset"
+              >
+                Limpar
+                <i class="material-icons right">delete</i>
+              </button>
+              <button
+                class="btn waves-effect waves-light blue"
+                type="submit"
+                name="action"
+              >
+                Salvar
+                <i class="material-icons right">send</i>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="/vue/dist/vue.js"></script>
+    <script src="/javascripts/script.js"></script>
+  </body>
+</html>

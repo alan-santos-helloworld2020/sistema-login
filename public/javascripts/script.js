@@ -4,7 +4,7 @@ let root = new Vue({
   el: "#root",
   data: {
     login:{
-        username:null,
+        email:null,
         password:null
     },
     cadastro: {
@@ -16,7 +16,7 @@ let root = new Vue({
     },
   },
   methods: {
-    
+
     logar(){
       fetch('/logar',{
         method:'POST',
@@ -27,6 +27,10 @@ let root = new Vue({
 
       })
       .then(result => result.json())
+      .then(resp =>{
+        alert(resp.data)
+        console.log(resp)
+      })
       .catch(err => console.log(err))
     },
 

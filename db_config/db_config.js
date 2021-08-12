@@ -14,7 +14,7 @@ var sql = `create table if not exists user(
         data varchar(50) not null,
         username varchar(50) not null,
         telefone varchar(20) not null,
-        email varchar(50) not null,
+        email varchar(500) not null,
         cep varchar(50) not null,
         password varchar(50) not null
         );`;
@@ -22,9 +22,8 @@ var sql = `create table if not exists user(
 connection.execute(sql,(err, rows, fields)=>{
     if (err) {
         console.log(`Erro: ${err}`)
-        
     } else {
-        console.log(rows)
+        console.log('Tabela User Criada com Sucesso')
         
     }
 });
